@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Entrega 2</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <div onclick="handleclick" class="logo">
+          <a href="#">Prestamos YA</a>
+        </div>
+        <ul class="nav-menu">
+          <div class="icon-menu close-mobile-btn">
+            <i class="fa fa-times"></i>
+          </div>
+          <li><a href="#">Solicita tu prestamo</a></li>
+          <li><a href="#terminos">Términos y Condiciones</a></li>
+          <li><a href="#politicas">Politicas de Privacidad</a></li>
+          <li><a href="#preguntas">Preguntas Frecuentes</a></li>
+        </ul>
+        <div class="icon-menu mobile-btn">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <br /><br /><br /><br /><br /><br />
+    <div class="container">
+      <h1>Obtené tu prestamo con un solo click!</h1>
+      <form method="get" id="form" name="form">
+        <div class="row">
+          <div class="column">
+            <label for="name">Nombre</label>
+            <input type="text" name= "name"  id="name" placeholder="Nombre" required/>
+          </div>
+          <div class="column">
+            <label for="surname">Apellido</label>
+            <input type="text" name= "surname" id="surname"  placeholder="Apellido" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="birthdate">Fecha de nacimiento</label>
+            <input
+              type="date"
+              id="birthdate"
+              placeholder="Fecha de nacimiento"
+              required
+            />
+          </div>
+          <div class="column">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" placeholder="DNI" required />
+          </div>
+          <div class="column">
+            <label for="contact">Teléfono Celular</label>
+            <input type="tel" id="contact" placeholder="+54" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="subject">Genero</label>
+            <select class="desplegable" id="generos" required>
+              <option value="m">Masculino</option>
+              <option value="f">Femenino</option>
+            </select>
+          </div>
+          <div class="column">
+            <label for="issue">Seleccionar un monto</label>
+            <select class="desplegable" id="montos" required>
+              <option value="$50000">$50000</option>
+              <option value="$75000">$75000</option>
+              <option value="$100000">$100000</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column"><input type="reset"
+            value="Restablecer campos" /></div>
+        </div>
+        <div class="row">
+          <button type="button" class="open-modal" data-open="intereses">Calcular amortizaciones</button>
+          <div class="modal" id="intereses">
+            <div class="modal-dialog">
+              <section class="modal-content">
+                <table class="tab">
+                  <thead>
+                      <tr>
+                          <td>Monto</td>
+                          <td>Tasa Anual</td>
+                          <td>Tasa Mensual</td>
+                          <td>Intereses</td>
+                          <td>Impuestos</td>
+                      </tr>
+                  </thead>
+                  <tbody id="tab">
+                      <tr>
+                          <td id="t1"></td>
+                          <td id="t2"></td>
+                          <td id="t3"></td>
+                          <td id="t4"></td>
+                          <td id="t5"></td>
+                      </tr>
+                  </tbody>
+              </table>
+            </section>
+              <button type="button" class="close-modal" aria-label="close modal" data-close>ESC para salir</button>
+          </div>
+        </div>
+        <button id="submit" input type ="submit">Solicitar</button>
+      </form>
+    </div>
+
+
+    <div class="content">
+      <h1 class="title" id="terminos">Terminos y condiciones</h1>
+      <p>
+        Prestamos Ya SA es una financiera cuya actividad principal es permitir a
+        las personas interesadas (los “Clientes”) en obtener créditos
+        personales. Los presentes Términos y Condiciones regirán el uso de la
+        Plataforma y el Servicio suministrado por Prestamos Ya al Cliente, quien
+        acepta expresamente los mismos mediante el envío del formulario de
+        solicitud.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde rerum
+        tenetur quod voluptates sit doloribus eius sunt minima, modi minus?
+        Adipisci, natus. Ipsa eum quis asperiores dicta qui. Laboriosam, fugiat?
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde rerum
+        tenetur quod voluptates sit doloribus eius sunt minima, modi minus?
+        Adipisci, natus. Ipsa eum quis asperiores dicta qui. Laboriosam, fugiat?
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde rerum
+        tenetur quod voluptates sit doloribus eius sunt minima, modi minus?
+        Adipisci, natus. Ipsa eum quis asperiores dicta qui. Laboriosam, fugiat?
+      </p>
+      <br /><br /><br /><br /><br />
+      <h1 class="title" id="politicas">Politicas de Privacidad</h1>
+      <p>
+        La política de privacidad de Prestamos Ya está dirigida a la protección
+        y seguridad de los Datos Personales (en adelante los “Datos”)
+        proporcionados por los usuarios que utilizan sus servicios (en adelante
+        “Clientes”). Para la utilización de los servicios de Prestamos Ya, los
+        Clientes deberán completar una o más solicitudes online que contendrán
+        algunos datos personales. La recopilación y el tratamiento de esos datos
+        se ajustará a la Política de Privacidad que se describe e informa a
+        continuación y a la cual los Clientes se sujetan, prestando su expreso y
+        libre consentimiento para su tratamiento. Esta Política de Privacidad de
+        Datos es parte integrante de los Términos y Condiciones Generales a los
+        que los Clientes adhieren al utilizar el Servicio de Prestamos Ya. De
+        esta manera, los Clientes prestan su consentimiento voluntario, expreso
+        e informado para ceder sus Datos adhiriendo a esta Política de
+        Privacidad, lo que constituye un requisito esencial para poder utilizar
+        los servicios de Prestamos Ya.
+      </p>
+
+      <br /><br /><br /><br /><br />
+      <h1 class="title" id="preguntas">Preguntas Frecuentes</h1>
+      <ul>
+        <li>
+          <strong>¿Para qué sirve Prestamos Ya?</strong> El objetivo de
+          Prestamos Ya es que encuentres los mejores productos financieros según
+          tus necesidades específicas, de forma rápida, gratuita y segura en un
+          solo lugar.
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer" data-aos="fade-in" data-aos-duration="2000">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="footer-info">
+            <h2><strong>Nuestras oficinas</strong></h2>
+            <h3>Av cabildo 2540, Buenos Aires, Argentina</h3>
+            <div class="footer-menu">
+              <p>+541140272069</p>
+              <p>prestamosYA@gmail.com</p>
+            </div>
+            <div class="footer-social">
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-youtube"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="container copyright">
+          <p>
+            &copy; <a href="#">CoderHouse</a>, All Right Reserved | Designed By
+            Boris Becco
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="DOM.js"></script>
+  </body>
+</html>
+
+<h1></h1>
